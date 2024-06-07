@@ -13,18 +13,19 @@ interface Discount {
 }
 
 export interface CartOption {
-    item: Item;
-    discounts: Discount;
+    items: Record<string, Item>;
+    discounts: Record<string, Discount>;
     currency_code: string;
 }
 
 export const cartOptionApi = async () => {
-    const { data } = await axios.get<CartOption>(`${BASE_URL}`,
+    const res = await axios.get<CartOption>(
+        `${BASE_URL}`,
         {
             headers: {
                 'content-type':'application/json'
             },
         }
     );
-    return data;
+    return res;
 };

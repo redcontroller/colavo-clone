@@ -1,29 +1,27 @@
-import React, { useEffect } from "react";
-import axios from 'axios';
-import baseUrl from '../api/baseUrl';
+import React, { useState, useEffect } from "react";
+import { cartOptionApi } from '../api/cartOptionApi';
+import { CartOption } from "../api/cartOptionApi";
 
 export default function ApiTest() {
+    const [option, setOption] = useState<CartOption>();
+
+    const fetchOptions = async () => {
+        try {
+            const res = await cartOptionApi();
+            // console.log(res.data);
+            setOption(res.data);
+        } catch (err) {
+            console.error('Error fetching uses:', err);
+        }
+    };
 
     useEffect(() => {
-        const fetchOptions = async () => {
-            try {
-                const res = await axios.get(baseUrl,
-                    {
-                    headers: {
-                        Accept: "application/json",
-                    },
-                    }
-                );
-                console.log(res.data);
-            } catch (err) {
-                console.error('Error fetching uses:', err);
-            }
-        };
-
         fetchOptions();
     }, []);
 
     return (
-        <p>ApiTest</p>
+        <div>
+            {option && <p>{JSON.stringify(option)}</p>}
+        </div>
     );
 }
