@@ -62,9 +62,14 @@ const StyledIcon = styled.img`
     cursor: pointer;
 `;
 
+const Container = styled.div`
+    place-content: center;
+`;
+
 export {
     StyledButton,
     StyledSpan,
     StyledImg,
     StyledIcon,
+    Container,
 }
