@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import icon_innerAdd from '../../assets/icon/icon_inner_add.svg';
+import icon_innerAdd from '../../../assets/icon/icon_inner_add.svg';
 
 const StyledButton = styled.button`
     width: 33.8rem;
@@ -55,8 +55,16 @@ const StyledImg = styled.img`
     cursor: pointer;
 `;
 
+const StyledIcon = styled.img`
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+`;
+
 export {
     StyledButton,
     StyledSpan,
     StyledImg,
+    StyledIcon,
 }
