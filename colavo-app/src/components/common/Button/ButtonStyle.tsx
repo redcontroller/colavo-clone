@@ -29,12 +29,16 @@ const StyledButton = styled.button`
         font-weight: 600;
         background-color: var(--bg-footer-tag-color);
     }
-    `;
+`;
 
 const StyledSpan = styled.span`
     position: relative;
+    line-height: 1.7rem;
+    vertical-align: top;
 
     &.span_mixed {
+        left: 1.2rem;
+        /* left: calc((2.8rem + 1.7rem + 0.7rem)* 1.4rem / 2.8rem); */
         &::before {
             content: '';
             display: inline-block;
@@ -52,24 +56,24 @@ const StyledImg = styled.img`
     display: inline-block;
     width: 5rem;
     height: 5rem;
+    padding: 0 10px;
     cursor: pointer;
-`;
 
-const StyledIcon = styled.img`
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    cursor: pointer;
+    &.button_icon {
+        width: 2rem;
+        height: 2rem;
+    }
 `;
 
 const Container = styled.div`
+    display: flex;
     place-content: center;
+    /* margin-top: 10px; */
 `;
 
 export {
     StyledButton,
     StyledSpan,
     StyledImg,
-    StyledIcon,
     Container,
 }

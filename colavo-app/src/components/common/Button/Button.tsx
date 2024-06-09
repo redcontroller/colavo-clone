@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-    StyledIcon,
     StyledImg,
     StyledButton,
     StyledSpan,
@@ -12,18 +11,19 @@ interface ButtonOptions {
     color?: 'blue' | 'gray' | 'darkGray';
     disabled?: boolean;
     type?: 'default' | 'mixed' | 'image' | 'icon';
-    iconPath?: string;
+    path?: string;
     onClick?: (even: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button = ({ text, color, disabled=false, type='default', iconPath, onClick }: ButtonOptions) => {
+const Button = ({ text, color, disabled=false, type='default', path, onClick }: ButtonOptions) => {
 
     return (
         <Container>
-            { type==='image' ? (
-                    <StyledImg src={iconPath} alt='할인 메뉴 추가' />
-                ): type==='icon' ? (
-                    <StyledIcon src={iconPath} alt='할인 메뉴 추가' />
+            { type==='image' || type==='icon' ? (
+                    <StyledImg 
+                        className={`button_${type}`}
+                        src={path}
+                    />
                 ):(
                     <StyledButton
                         className={`button_${color}`}
