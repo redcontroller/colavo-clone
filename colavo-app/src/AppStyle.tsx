@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
         --line-color: #EDEDED;
         --bg-option-btn-color: #F0F4F7;
         --bg-footer-btn-color: #6995F4;
+        --bg-disabled-footer-btn-color: rgb(105, 149, 244, 60%);
         --icon-color: #727981;
         --bg-select-color: #F7F7F7;
         --bg-choice-color: #EFEFEF;
