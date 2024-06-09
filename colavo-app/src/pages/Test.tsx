@@ -6,6 +6,7 @@ import formatTime from '../feature/formatTime';
 import icon_add from '../assets/icon/icon_add.svg';
 import icon_esc from '../assets/icon/icon_esc.svg';
 import icon_back from '../assets/icon/icon_back.svg';
+import icon_drag_drop from '../assets/icon/icon_drag_drop.svg'
 
 const Cart = () => {
     // const params = useParams();
@@ -22,39 +23,42 @@ const Cart = () => {
         <div>
             Shopping Cart Page
             <Header
+                type='cart'
+                info={info}
                 leftChild={
                     <Button
                         type='icon'
-                        iconPath={icon_esc}
+                        path={icon_esc}
                         onClick={() => nav(-1)}
                     />
                 }
-                info={info}
             />
             <Header
-                leftChild={
-                    <Button
-                        type='icon'
-                        iconPath={icon_back}
-                        onClick={() => nav(-1)}
-                    />
-                }
+                type='item'
                 info={info}
                 text='시술 메뉴'
-            />
-            <Header
                 leftChild={
                     <Button
                         type='icon'
-                        iconPath={icon_back}
+                        path={icon_back}
                         onClick={() => nav(-1)}
                     />
                 }
+            />
+            <Header
+                type='discount'
                 text='할인 메뉴'
+                leftChild={
+                    <Button
+                        type='icon'
+                        path={icon_back}
+                        onClick={() => nav(-1)}
+                    />
+                }
                 rightChild={
                     <Button
                         type='icon'
-                        iconPath={icon_back}
+                        path={icon_drag_drop}
                         onClick={() => alert("준비 중 입니다.")}
                     />
                 }
@@ -93,7 +97,7 @@ const Cart = () => {
             <div>
                 <Button 
                     type='image'
-                    iconPath={icon_add}
+                    path={icon_add}
                 />
             </div>
             <div>

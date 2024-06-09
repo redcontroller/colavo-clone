@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
         /* CSS 커스텀 프로퍼티: font */
         --font-primary-color: #25262A;
         --font-button-color: white;
-        --font-reserved-color: #B9C3CE;
+        --font-reserved-color: #A7A9AC;
         --font-discount-color: #FC79AB;
         --font-discount-detail-color: #999999;
         --font-select-color: #C0C0C2;
@@ -46,9 +46,13 @@ const GlobalStyle = createGlobalStyle`
     body,
     button,
     div,
-    p {
+    p,
+    h1,
+    h2,
+    h3 {
         font: inherit;
         font-size: 1.4rem;
+        text-align: center;
         margin: 0;
         padding: 0;
         border: 0;
