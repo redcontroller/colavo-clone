@@ -3,7 +3,8 @@ import {
     StyledIcon,
     StyledImg,
     StyledButton,
-    StyledSpan
+    StyledSpan,
+    Container,
 } from './ButtonStyle';
 
 interface ButtonOptions {
@@ -18,7 +19,7 @@ interface ButtonOptions {
 const Button = ({ text, color, disabled=false, type='default', iconPath, onClick }: ButtonOptions) => {
 
     return (
-        <>
+        <Container>
             { type==='image' ? (
                     <StyledImg src={iconPath} alt='할인 메뉴 추가' />
                 ): type==='icon' ? (
@@ -34,7 +35,7 @@ const Button = ({ text, color, disabled=false, type='default', iconPath, onClick
                         </StyledSpan>
                     </StyledButton>
             )}
-        </>
+        </Container>
     );
 };
 
