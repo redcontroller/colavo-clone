@@ -18,7 +18,7 @@ export interface CartOption {
     currency_code: string;
 }
 
-export const cartOptionApi = async () => {
+const cartOptionApi = async () => {
     const res = await axios.get<CartOption>(
         `${BASE_URL}`,
         {
@@ -29,3 +29,5 @@ export const cartOptionApi = async () => {
     );
     return res;
 };
+
+export default cartOptionApi;

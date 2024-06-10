@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import cartOptionApi, { CartOption } from '../api/cartOptionApi';
 
-export default function ApiTest() {
-    const [option, setOption] = useState<CartOption>();
+export default function useFetchService () {
+    const [serviceData, setServiceData] = useState<CartOption | undefined>();
 
-    const fetchOptions = async () => {
+        const fetchOptions = async () => {
         try {
             const res = await cartOptionApi();
-            // console.log(res.data);
-            setOption(res.data);
+            setServiceData(res.data);
         } catch (err) {
             console.error('Error fetching uses:', err);
         }
@@ -18,9 +17,5 @@ export default function ApiTest() {
         fetchOptions();
     }, []);
 
-    return (
-        <div>
-            {option && <p>{JSON.stringify(option)}</p>}
-        </div>
-    );
+    return serviceData;
 }
