@@ -7,6 +7,7 @@ import icon_add from '../assets/icon/icon_add.svg';
 import icon_esc from '../assets/icon/icon_esc.svg';
 import icon_back from '../assets/icon/icon_back.svg';
 import icon_drag_drop from '../assets/icon/icon_drag_drop.svg'
+import Footer from '../components/common/Footer/Footer';
 
 const Cart = () => {
     // const params = useParams();
@@ -44,6 +45,13 @@ const Cart = () => {
                         onClick={() => nav(-1)}
                     />
                 }
+                rightChild={
+                    <Button
+                        type='icon'
+                        path={icon_drag_drop}
+                        onClick={() => alert("준비 중 입니다.")}
+                    />
+                }
             />
             <Header
                 type='discount'
@@ -53,13 +61,6 @@ const Cart = () => {
                         type='icon'
                         path={icon_back}
                         onClick={() => nav(-1)}
-                    />
-                }
-                rightChild={
-                    <Button
-                        type='icon'
-                        path={icon_drag_drop}
-                        onClick={() => alert("준비 중 입니다.")}
                     />
                 }
             />
@@ -106,6 +107,12 @@ const Cart = () => {
                     color='darkGray'
                 />
             </div>
+
+            <Footer
+                type='discount'
+                text='다음'
+                disabled={true}
+            />
         </div>
     );
 };
