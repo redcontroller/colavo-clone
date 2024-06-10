@@ -14,7 +14,9 @@ const Discount = () => {
                 text='할인 메뉴'
                 leftChild={
                     <Button
-                        type='icon'
+                        type="image"
+                        width={20}
+                        height={20}
                         path={icon_back}
                         onClick={() => nav(-1)}
                     />

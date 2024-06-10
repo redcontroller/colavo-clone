@@ -28,7 +28,9 @@ const Cart = () => {
                 info={info}
                 leftChild={
                     <Button
-                        type='icon'
+                        type='image'
+                        width={20}
+                        height={20}
                         path={icon_esc}
                         onClick={() => nav(-1)}
                     />
@@ -40,14 +42,18 @@ const Cart = () => {
                 text='시술 메뉴'
                 leftChild={
                     <Button
-                        type='icon'
+                        type='image'
+                        width={20}
+                        height={20}
                         path={icon_back}
                         onClick={() => nav(-1)}
                     />
                 }
                 rightChild={
                     <Button
-                        type='icon'
+                        type='image'
+                        width={20}
+                        height={20}
                         path={icon_drag_drop}
                         onClick={() => alert("준비 중 입니다.")}
                     />
@@ -58,7 +64,9 @@ const Cart = () => {
                 text='할인 메뉴'
                 leftChild={
                     <Button
-                        type='icon'
+                        type='image'
+                        width={20}
+                        height={20}
                         path={icon_back}
                         onClick={() => nav(-1)}
                     />
@@ -109,9 +117,9 @@ const Cart = () => {
             </div>
 
             <Footer
-                type='discount'
+                type='cart'
                 text='다음'
-                disabled={true}
+                disabled={false}
             />
         </div>
     );

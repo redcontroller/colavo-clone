@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
 
     :root {
         font-size: 62.5%;
-        font-family: 'Inter', sans-serif;
+        font-family: Inter, sans-serif;
         color-scheme: light dark;
         color: rgba(255, 255, 255, 0.87);
         background-color: #242424;

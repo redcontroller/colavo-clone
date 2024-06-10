@@ -20,16 +20,38 @@ const StyledButton = styled.button`
     }
 
     &.button_darkGray {
-        width: 7.2rem;
-        height: 2.1rem;
+        width: fit-content;
+        height: 100%;
+        height: fit-content;
+        margin: 5px 0px;
         color: var(--font-footer-tag-color);
         font-size: 1rem;
         font-weight: 600;
+        border-radius: 50rem;
         background-color: var(--bg-footer-tag-color);
     }
 `;
 
+interface StyledImgProps {
+    className?: string;
+    src?: string;
+    onClick?: (() => void) 
+    |((even: React.MouseEvent<HTMLButtonElement>) => void);
+    width: number;
+    height: number;
+}
+
+const StyledImg = styled.img<StyledImgProps>`
+    display: inline-block;
+    width: ${props => (`${props.width}px` || '5rem')};
+    height: ${props => (`${props.height}px` || '5rem')};
+    padding: 0 10px;
+    cursor: pointer;
+`;
+
 const StyledSpan = styled.span`
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
     position: relative;
     line-height: 1.7rem;
     vertical-align: top;
@@ -46,19 +68,6 @@ const StyledSpan = styled.span`
             background-size: cover;
             left: -2.4rem;
         }
-    }
-`;
-
-const StyledImg = styled.img`
-    display: inline-block;
-    width: 5rem;
-    height: 5rem;
-    padding: 0 10px;
-    cursor: pointer;
-
-    &.button_icon {
-        width: 2rem;
-        height: 2rem;
     }
 `;
 
