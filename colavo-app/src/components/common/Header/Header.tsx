@@ -13,8 +13,10 @@ export interface UserInfo {
     reserved: string;
 }
 
+export type PageType = 'cart' | 'item' | 'discount';
+
 interface HeaderOptions {
-    type: 'cart' | 'item' | 'discount';
+    type: PageType;
     info?: UserInfo;
     text?: string;
     leftChild: JSX.Element;
