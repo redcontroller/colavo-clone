@@ -4,10 +4,10 @@ import GlobalStyle from './AppStyle';
 function App() {
   
   return (
-    <>
-      <GlobalStyle />
-      <Routers />
-    </>
+      <>
+        <GlobalStyle />
+        <Routers />
+      </>
   )
 }
 
