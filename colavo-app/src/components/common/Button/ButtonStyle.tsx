@@ -4,15 +4,13 @@ import icon_innerAdd from '../../../assets/icon/icon_inner_add.svg';
 const StyledButton = styled.button`
     width: 33.8rem;
     height: 4.6rem;
-    font-size: 1.4rem;
+    color: ${(props) => (props.disabled ?  'var(--font-disabled-color)' : 'white')};
+    font-size: ${(props) => (props.disabled ?  '1.3rem' : '1.4rem')};
     border-radius: 1rem;
     cursor: ${(props) => (props.disabled ? 'not-allowed':'pointer')};
-    
-    &.button_blue {
-        font-size: ${(props) => (props.disabled ?  '1.3rem' : '1.4rem')};
-        color: ${(props) => (props.disabled ?  'var(--font-disabled-color)' : 'white')};
-        background-color: ${(props) => (props.disabled ? 'var(--bg-disabled-footer-btn-color)' : 'var(--bg-footer-btn-color)')};
-    }
+    background-color: ${(props) => (props.disabled ? 
+            'var(--bg-disabled-footer-btn-color)' 
+            : 'var(--bg-footer-btn-color)')};
 
     &.button_gray {
         width: 16.7rem;
@@ -38,7 +36,6 @@ const StyledSpan = styled.span`
 
     &.span_mixed {
         left: 1.2rem;
-        /* left: calc((2.8rem + 1.7rem + 0.7rem)* 1.4rem / 2.8rem); */
         &::before {
             content: '';
             display: inline-block;
@@ -66,9 +63,9 @@ const StyledImg = styled.img`
 `;
 
 const Container = styled.div`
+    width: 100%;
     display: flex;
     place-content: center;
-    /* margin-top: 10px; */
 `;
 
 export {

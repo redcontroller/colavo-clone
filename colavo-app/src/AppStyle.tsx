@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
 
     :root {
         font-size: 62.5%;
-        font-family: 'Noto Sans Arabic', Inter, sans-serif;
+        font-family: 'Inter', sans-serif;
         color-scheme: light dark;
         color: rgba(255, 255, 255, 0.87);
         background-color: #242424;
@@ -61,11 +61,17 @@ const GlobalStyle = createGlobalStyle`
     body {
         display: flex;
         justify-content: center;
-        width: 350px;
-        min-width: 320px;
+        width: 100%;
+        min-width: 35rem;
+        height: auto;
         min-height: 100vh;
+        /* padding-bottom: 14.4rem; */
         padding: 0 1rem;
         margin: 0 auto;
+    }
+    
+    #root {
+        width: 36rem;
         box-shadow: rgba(181, 180, 180, 0.25) 0px 13px 27px -5px, rgba(181, 180, 180, 0.25) 0px 8px 16px -8px;
     }
     
