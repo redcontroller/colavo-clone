@@ -26,7 +26,6 @@ type ServiceProviderProps = {
 
 export default function ServiceProvider ({ children }: ServiceProviderProps) {
     const serviceData = useFetchService();
-    console.log(serviceData);
     const [service, dispatch] = useReducer(serviceReducer, serviceData);
 
 

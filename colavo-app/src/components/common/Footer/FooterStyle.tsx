@@ -12,6 +12,7 @@ const StyledFooter = styled.footer`
     padding: 1.6rem;
     box-sizing: border-box;
     box-shadow: 0px -5px 10px -7px rgba(128, 128, 128, .2);
+    background-color: white;
 `;
 
 const DiscountWrapper = styled.div`

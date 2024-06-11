@@ -63,9 +63,9 @@ const GlobalStyle = createGlobalStyle`
         justify-content: center;
         width: 100%;
         min-width: 35rem;
-        height: auto;
+        /* height: auto; */
+        height: calc(100vh + 80rem);
         min-height: 100vh;
-        /* padding-bottom: 14.4rem; */
         padding: 0 1rem;
         margin: 0 auto;
     }
