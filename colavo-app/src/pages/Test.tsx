@@ -9,7 +9,7 @@ import icon_back from '../assets/icon/icon_back.svg';
 import icon_drag_drop from '../assets/icon/icon_drag_drop.svg'
 import Footer from '../components/common/Footer/Footer';
 
-const Cart = () => {
+const Test = () => {
     // const params = useParams();
     const nav = useNavigate();
 
@@ -125,4 +125,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default Test;

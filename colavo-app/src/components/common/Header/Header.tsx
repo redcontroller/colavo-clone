@@ -28,7 +28,7 @@ const Header = ({type, info, text, leftChild, rightChild}: HeaderOptions) => {
         <StyledHeader>
             <HeaderLeft>{leftChild}</HeaderLeft>
             <HeaderCenter>
-                <StyledH1>{text ? text : `${info?.name}(담당: ${info?.manager})`}</StyledH1>
+                <StyledH1>{text ? text : `${info?.name} (담당: ${info?.manager})`}</StyledH1>
                 <StyledP>{type==='item' ? info?.name : info?.reserved}</StyledP>
             </HeaderCenter>
             <HeaderRight>{rightChild}</HeaderRight>
